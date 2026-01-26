@@ -1,0 +1,21 @@
+#include <iostream>
+
+int main(int argc,char*argv[]) {  
+    //  int a;
+    //  std::cin >> a ;// std::endl;  
+    //  std::cout << "Helloworld" << std::endl;
+    //  std::cerr << "ERROR!" << std::endl;
+    //  return a;
+    
+     int nail[9];
+    for(int i = 0; i<9; i++){   
+       nail[i] = i; 
+    }
+    for(int i = 0; i<9; i++){   
+       std::cout << "nail[" << i << "] = " << nail[i] << "\n"; 
+    }
+    for( int i = 0; i<argc; i++){   
+        std::cout << "argv[" << i << "] =" << argv[i] << "\n";
+    }
+    return 0;
+}
