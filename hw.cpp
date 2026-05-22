@@ -11,7 +11,7 @@
 void printStack(std::stack<int>&, const std::string& label){  
   std::cout<<label;
   std::vector<int> temp;
-  while(! s.empty()) {  
+  while(!s.empty()) {  
     temp.push_back(s.top());
     s.pop();
   }
@@ -20,19 +20,48 @@ void printStack(std::stack<int>&, const std::string& label){
     if(i>0) std::cout<<" ";
   }
   class Graph{  
-    
+int numVertices;
+std::vector<std::vector<int>> adj;
+std::vector<bool>visited;
+bool verbose;
+public:
+Graph (int V, bool verboseMode = false) { 
+ numVertices = V;
+ adj.resize(V);
+ visited resize( V, false),
+ verbose = verboseMode;
+}
+void addEdge(int U, int V){ 
+adj[U].push_back(V);
+adj[V].push_back(U);
+}
+void DFSRecursive( int vertex){ 
+  visited[vertex] = true;
+  std::cout vertex << " ";
+  for( int  neighbor: adj[vertex]){ 
+    if(!visited[neighbor]) {  
+      DFSRecursive(neighbor)
+    }
+  }
+} 
+void DFSRecursivewrapper( int statvertex){  
+  std::fill(visited.begin(), visited.end(), false);
+  std::<<cout " DfS begin: ";
+  DFSRecursive(statvertex);
+  std::<<cout endl;
+}
   }
 }
 
 
 int main(){
-
-
-
-
-
-
-
+Graph g1(6);
+g1.addEdge(0,1);
+g1.addEdge (0,2);
+g1.addEdge (1,3);
+g1.addEdge (1,5);
+g1.addEdge (2, 5);
+g1.DFSRecursivewrapper(0);
 
 
 
@@ -84,6 +113,7 @@ int main(){
        nail [i] = i;
     }
 
+    
     for(int i=0; i < 9; i++){
         std::cout << " nail [ " << i << " ] = " << nail[i] << "\n";
    }*/
@@ -91,5 +121,4 @@ int main(){
     // for(int i=0; i < argc; i++){
     //     std::cout << " argv [ " << i << " ] = " << argv[i] << "\n";
     // }
-    return 0;
-}
+  
