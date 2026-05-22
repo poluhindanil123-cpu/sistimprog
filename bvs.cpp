@@ -25,3 +25,12 @@ Graph (int V, bool verboseMode = false) {
 adj[U].push_back(V);
 adj[V].push_back(U);
 }
+void BFS (int statvertex){  
+    std::fill(visited.begin(), visited.end(), false)
+    srd:: queue <int>;
+    visited[statvertex] = true;
+    q.push (statvertex);
+    if(verbose)i ;}
+    int step = 1;
+    int level = 0;
+}
