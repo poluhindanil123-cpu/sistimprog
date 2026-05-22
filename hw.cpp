@@ -1,19 +1,48 @@
 #include <iostream>
 
-#include <string>
-#include "stone.h"
+#include <vector>
+#include <stack>
 
 
 //  void getHelp(){
 //      std::cout<<"Здесь будет помощь."<<"\n";
     
 //  }
-
+void printStack(std::stack<int>&, const std::string& label){  
+  std::cout<<label;
+  std::vector<int> temp;
+  while(! s.empty()) {  
+    temp.push_back(s.top());
+    s.pop();
+  }
+  for(int i = temp.size()-i; i >=0; i--){ 
+    std::cout<< temp[i];
+    if(i>0) std::cout<<" ";
+  }
+  class Graph{  
+    
+  }
+}
 
 
 int main(){
+
+
+
+
+
+
+
+
+
+
+
+
+
+   return 0;
+}
     //  int argc, char* argv[]
-getHelp();
+// getHelp();
     // setlocale(LC_ALL, "");
    
   //    bool needHelp=false;
